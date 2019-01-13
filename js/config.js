@@ -1,11 +1,11 @@
 'use strict'
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyAYrL_S9fw2UEAFC69J8wNOWPRdx4yCIp4",
-    authDomain: "endelaf-ace62.firebaseapp.com",
-    databaseURL: "https://endelaf-ace62.firebaseio.com",
-    projectId: "endelaf-ace62",
-    storageBucket: "endelaf-ace62.appspot.com",
-    messagingSenderId: "308620752271"
+    apiKey: "AIzaSyAWtI3XUPbKHFgAAOlGIDGQq7VO6ZKyzGY",
+    authDomain: "endelafuserprofile.firebaseapp.com",
+    databaseURL: "https://endelafuserprofile.firebaseio.com",
+    projectId: "endelafuserprofile",
+    storageBucket: "endelafuserprofile.appspot.com",
+    messagingSenderId: "268263711931"
 };
-firebase.initializeApp(config); 
+firebase.initializeApp(config);
