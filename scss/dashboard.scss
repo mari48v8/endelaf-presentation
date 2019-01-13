@@ -1,0 +1,465 @@
+$bluecolor: blue;
+$white:white;
+$green:#78BD6F;
+$darkblue:#446B7F;
+$lightblue:#12bbf1;
+$lightgrey:#5C5656;
+$darkgrey:#707070;
+$ligthergrey:#ccc;
+$black:#000000;
+$red: #FF194E;
+$redgraph:#de4a5e;
+
+body {
+    margin: 0;
+}
+
+#doggraph1,
+#doggraph2,
+#doggraph3,
+#clothesgraph1,
+#clothesgraph2,
+#clothesgraph3,
+#toiletriesgraph1,
+#toiletriesgraph2,
+#toiletriesgraph3,
+#totaldoggraph1,
+#totalclothesgraph2,
+#totaltoiletriesgraph3 {
+    width: 50px;
+    height: 0px;
+    border: 1px black solid;
+}
+
+
+/*-----------------------  Wrapper og Container  -----------------------*/
+
+.wrapper-grid {
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-top: 2px dotted $black;
+
+    &:nth-child(1) {
+        width: 100%;
+        padding-top: 3%;
+        border: none;
+        padding-bottom: 3%;
+    }
+
+    &:nth-child(4) {
+        width: 100%;
+        padding-top: 4%;
+        padding-bottom: 3%;
+        border-top: 2px dotted $black;
+    }
+}
+
+.wrapper-grid-total {
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: $lightblue;
+}
+
+.graph-container {
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 131px;
+}
+
+/*----------------------- Graph row  -----------------------*/
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row-col {
+    margin-left: 3.8%;
+    //display: flex;
+    //align-items: flex-end;
+    line-height: 7px;
+}
+
+/*----------------------- Graph Columns  -----------------------*/
+
+.col-a {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-left: 4%;
+}
+
+.col-b {
+    -ms-flex: 0 0 66%;
+    flex: 0 0 66%;
+    max-width: 66%;
+}
+
+.col-c {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-money {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: $white;
+}
+
+/*-----------------------  Graph Overskrift  -----------------------*/
+
+.dash-h1 {
+    font-size: 0.8em;
+    text-align: left;
+    color: $black;
+}
+
+.dash-h1-center {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+}
+
+/*-----------------------  Graph 1 Data  -----------------------*/
+
+.dashboard-dog-size {
+    width: 40%;
+    height: 19%;
+}
+
+.dashboard-dogtotal-size {
+    width: 30%;
+    height: 10%;
+}
+
+%blokdesign {
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: all 0.6s ease;
+    align-self: end;
+}
+
+#doggraph1 {
+    @extend %blokdesign;
+    background-color: $darkblue;
+}
+
+#doggraph2 {
+    @extend %blokdesign;
+    background-color: $darkblue;
+    opacity: 0.5;
+}
+
+#doggraph3 {
+    @extend %blokdesign;
+    background-color: $darkblue;
+    opacity: 0.2;
+}
+
+/*----------------------- Graph 2 Data -----------------------*/
+
+.dashboard-hue-size {
+    width: 40%;
+    height: 15%;
+}
+
+.dashboard-huetotal-size {
+    width: 30%;
+    height: 8%;
+}
+
+
+#clothesgraph1 {
+    @extend %blokdesign;
+    background-color: $redgraph;
+}
+
+#clothesgraph2 {
+    @extend %blokdesign;
+    background-color: $redgraph;
+    opacity: 0.5;
+
+}
+
+#clothesgraph3 {
+    @extend %blokdesign;
+    background-color: $redgraph;
+    opacity: 0.2;
+
+}
+
+/*----------------------- Graph 3 Data  -----------------------*/
+
+.dashboard-tand-size {
+    width: 40%;
+    height: 14%;
+}
+
+.dashboard-tandtotal-size {
+    width: 33%;
+    height: 8%;
+}
+
+#toiletriesgraph1 {
+    @extend %blokdesign;
+    background-color: $green;
+}
+
+#toiletriesgraph2 {
+    @extend %blokdesign;
+    background-color: $green;
+    opacity: 0.5;
+}
+
+#toiletriesgraph3 {
+    @extend %blokdesign;
+    background-color: $green;
+    opacity: 0.2;
+
+}
+
+/*----------------------- Graph 4 Data  -----------------------*/
+%totaldog {
+    padding: 0;
+    border: none;
+    transition: all 0.6s ease;
+    align-self: end;
+}
+
+#totaldoggraph1 {
+    @extend %totaldog;
+    background-color: $darkblue;
+
+}
+
+#totalclothesgraph2 {
+    @extend %totaldog;
+    background-color: $redgraph;
+}
+
+#totaltoiletriesgraph3 {
+    @extend %totaldog;
+    background-color: $green;
+
+}
+
+/*----------------------- Graph Y Axis  -----------------------*/
+
+.y-axis {
+    position: relative;
+    width: 97%;
+    left: 0px;
+    top: 0px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20%;
+    margin-left: -4px;
+    padding: 0;
+}
+
+.y-axis li {
+    border-top: 1px solid $darkblue;
+    display: block;
+    height: 8.9px;
+    width: 4%;
+
+    &:nth-child(even) {
+        width: 2.5%;
+        margin-right: 4%;
+        border-top: 1px solid $ligthergrey;
+    }
+
+    &:last-child {
+        border-top: 1px solid $darkblue;
+        display: block;
+        height: 9.2px;
+        width: 92%;
+        position: relative;
+    }
+}
+
+span {
+    display: block;
+    font-size: 0.6em;
+    margin: -10px 0 0 -32px;
+    padding: 0 10px;
+    width: 40px;
+}
+
+/*----------------------- Graph Y Axis linje  -----------------------*/
+
+.vl1 {
+    border-left: 1px solid $black;
+    height: 170px;
+    margin-top: -86.9%;
+    //margin-left: -3.2%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vl2 {
+    border-left: 1px solid $black;
+    height: 174px;
+    margin-top: -102%;
+    margin-left: -4%;
+}
+
+.vl3 {
+    border-left: 1px solid $black;
+    height: 174px;
+    margin-top: -103.1%;
+    margin-left: -4%;
+}
+
+.vl4 {
+    border-left: 1px solid $black;
+    height: 340px;
+    margin-top: -161.1%;
+    //  margin-left: 0%;
+    //  margin-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+/*----------------------- Graph Antal  -----------------------*/
+
+.antal1 {
+    position: absolute;
+    top: 1%;
+    left: 30%;
+    font-size: 0.7em;
+}
+
+.antal2 {
+    position: absolute;
+    top: 22.5%;
+    left: 30%;
+    font-size: 0.7em;
+}
+
+.antal3 {
+    position: absolute;
+    top: 44.2%;
+    left: 30%;
+    font-size: 0.7em;
+}
+
+.antal4 {
+    position: absolute;
+    top: 66.5%;
+    left: 30%;
+    font-size: 0.7em;
+}
+
+/*----------------------- Graph p  -----------------------*/
+
+.p-graph {
+    font-size: 0.7em;
+    margin-left: 8px;
+}
+
+.p-kr {
+    width: 100%;
+    font-size: 1.6em;
+    text-align: center;
+    color: $white;
+}
+
+/*----------------------- Graph p  -----------------------*/
+
+%color-bx {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5px;
+    margin-right: 7px;
+    position: relative;
+    top: -2px;
+    margin-left: 6px;
+}
+
+.bx1 {
+    @extend %color-bx;
+    background-color: $darkblue;
+}
+
+.bx2 {
+    @extend %color-bx;
+    background-color: $darkblue;
+    opacity: 0.5;
+}
+
+.bx3 {
+    @extend %color-bx;
+    background-color: $darkblue;
+    opacity: 0.2;
+}
+
+.bx4 {
+    @extend %color-bx;
+    background-color: $redgraph;
+}
+
+.bx5 {
+    @extend %color-bx;
+    background-color: $redgraph;
+    opacity: 0.5;
+}
+
+.bx6 {
+    @extend %color-bx;
+    background-color: $redgraph;
+    opacity: 0.2;
+}
+
+.bx7 {
+    @extend %color-bx;
+    background-color: $green;
+}
+
+.bx8 {
+    @extend %color-bx;
+    background-color: $green;
+    opacity: 0.5;
+}
+
+.bx9 {
+    @extend %color-bx;
+    background-color: $green;
+    opacity: 0.2;
+}
+
+/*----------------------- Graph padding's  -----------------------*/
+
+.p-r-10,
+.p-r-11 {
+    margin-right: 12px;
+}
+
+.p-r-12 {
+    margin-right: 0px;
+}
+
+/*----------------------- Graph Donno??  -----------------------*/
+
+.graph-axis {
+    position: relative;
+}

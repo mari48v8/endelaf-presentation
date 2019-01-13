@@ -1,0 +1,301 @@
+@import 'form.scss';
+@import 'donation.scss';
+@import 'dashboard.scss';
+
+$bluecolor: blue;
+$white:white;
+$green:#78BD6F;
+$darkblue:#446B7F;
+$lightblue:#12bbf1;
+$lightgrey:#5C5656;
+$darkgrey:#707070;
+$black:#000000;
+$red: #FF194E;
+
+html,
+body,
+    {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+
+a {
+    color: $lightblue;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.p-s-09 {
+    font-size: 0.9em;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.p-t-10 {
+    padding-top: 10px;
+}
+
+.p-t-19 {
+    padding-top: 19px;
+}
+
+.p-t-40 {
+    padding-top: 40px;
+}
+
+.p-t-90 {
+    padding-top: 90px;
+}
+
+.m-b-50 {
+    margin-bottom: 50px;
+}
+
+.wrapper {
+    width: 375px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $lightblue;
+    padding: 3% 3% 4% 3% !important;
+    z-index: 1000;
+    //position: relative;
+}
+
+.thankyou {
+    background-color: $lightblue;
+    padding: 3% 5% 8% 3% !important;
+    z-index: 1000;
+    //position: relative;
+}
+
+.btn {
+    color: $white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 1em;
+
+}
+
+/*----------------------- index.html -----------------------*/
+
+
+.img_background {
+    background-image: url(../img/people-1495855_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% -175%;
+    // padding-left: 5%;
+}
+
+.logo {
+    width: 180px;
+    height: 40px;
+    background-image: url(../img/Logo.png);
+}
+
+.txt_box {
+    width: 110px;
+    height: auto;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 10%;
+    margin-top: 24%;
+    margin-left: 7%;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    background-color: $white;
+}
+
+.txt_box p {
+    color: $black;
+    font-size: 14px;
+}
+
+#btnSupport {
+    margin-bottom: 8%;
+}
+
+.flip {
+    margin: auto;
+    cursor: pointer;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin button-bg($bg) {
+    background: $bg;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
+}
+
+.btn-darkblue {
+    @include button-bg($darkblue);
+    cursor: pointer;
+
+}
+
+.btn-blue {
+    @include button-bg($lightblue);
+    cursor: pointer;
+
+}
+
+.btn-green {
+    @include button-bg($green);
+    margin-bottom: 20%;
+    cursor: pointer;
+
+}
+
+.btn-red {
+    @include button-bg($red);
+    margin-left: 8%;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+
+.ctn {
+    width: 100%;
+    margin-top: 0;
+
+}
+
+.c1 {
+    @include button-bg($darkblue);
+
+}
+
+.c2 {
+    @include button-bg($darkblue);
+    opacity: 0.8;
+
+}
+
+.c3 {
+    @include button-bg($darkblue);
+    opacity: 0.6;
+}
+
+.c4 {
+    @include button-bg($darkblue);
+    opacity: 0.4;
+}
+
+.hide {
+    display: none;
+}
+
+#myDIV1,
+#myDIV2,
+#myDIV3,
+#myDIV4 {
+    width: 150px;
+    height: 150px;
+    background-color: $lightblue;
+    display: none;
+}
+
+.idx {
+    font-size: 1.2em;
+    margin-top: 0;
+    padding-top: 0;
+    color: $white;
+    text-align: center;
+    padding: 7%;
+    font-weight: 400;
+    margin: 0;
+}
+
+.innerBox {
+    padding: 7%;
+    font-size: 0.8em;
+    text-align: left;
+    background: $white;
+}
+
+/*----------------------- modal newpassword.html -----------------------*/
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: $darkgrey;
+}
+
+.close-button:hover {
+    background-color: $lightgrey;
+}

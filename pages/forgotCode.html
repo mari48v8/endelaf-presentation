@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En-del-af.dk donations app">
+    <meta name="keywords" content="hjemløse,donation,dyr,tøj,personlig pleje,hundemad, hundefrakke, hundelegetøj, vinterfrakke, vanter, sokker,tandpleje,tamponer,barbergrej,billig,velgørenhed,hjerte,app,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <title>En-del-af.dk</title>
+</head>
+
+<body class="bg-img">
+    <div class="header">
+        <a href="../index.html">
+            <div class="logo floatleft"></div>
+        </a>
+        <div class="buttons">
+            <button id="btnLogin" class="btn btn-darkblue">Login</button>
+
+            <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+            <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form validate-form">
+
+                    <div class="logo m-b-50"></div>
+
+                    <h1 class="form-txt text-center">Glemt adgangskode</h1>
+
+                    <div class="wrap-input validate-input" data-validate="Enter email">
+                        <input type="email" id="txt_email" class="input form-control" placeholder="Din e-mail adresse">
+                        <span class="focus-input" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                </form>
+                <div class="container-login-form-btn p-t-19">
+                    <button id="btnForgot" type="button" class="login-form-btn">Send ny</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="../js/config.js"></script>
+    <script src="../main.js"></script>
+    <script src="../js/directions.js"></script>
+    <script src="../js/forgot.js"></script>
+
+</body>
+
+</html>
