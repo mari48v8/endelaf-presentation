@@ -11,6 +11,7 @@ function init() {
     dbRefDonations.on('value', snap => {
         let donations = (snap.val());
     });
+
 }
 
 function getDonationsData(data) {
@@ -19,6 +20,7 @@ function getDonationsData(data) {
 
     for (let i = 0; i < keys.length; i++) {
         let k = keys[i];
+        console.log(k);
         let uId = donations[k].uId;
         let items = donations[k].item;
         searchItems(items);
@@ -85,8 +87,10 @@ function money(items) {
 
         function add() {
             document.querySelector(".col-money").innerHTML = moneyCountArr.reduce(getSum);
+
         }
     })
+    totalMoney();
 }
 
 function errData(err) {
@@ -131,4 +135,37 @@ function totalGraphs() {
     document.querySelector("#totaldoggraph1").setAttribute("style", "height:" + totalDogHeight + "px");
     document.querySelector("#totalclothesgraph2").setAttribute("style", "height:" + totalClothesHeight + "px");
     document.querySelector("#totaltoiletriesgraph3").setAttribute("style", "height:" + totalToiletriesHeight + "px");
+
+
+}
+
+function totalMoney() {
+
+    let dogfoodMoney = (dogFoodCount * 75);
+    console.log(dogfoodMoney);
+    let dogclothesMoney = (dogClothesCount * 150);
+    console.log(dogclothesMoney);
+    let dogtoyMoney = (dogToyCount * 100);
+    console.log(dogtoyMoney);
+    let wintercoatMoney = (wintercoatCount * 200);
+    console.log(wintercoatMoney);
+    let hatAndGlovesMoney = (hatAndGlovesCount * 100);
+    console.log(hatAndGlovesMoney);
+    let socksMoney = (socksCount * 125);
+    console.log(socksMoney);
+    let toothbrushMoney = (toothbrushCount * 50);
+    console.log(toothbrushMoney);
+    let tamponsMoney = (tamponsCount * 75);
+    console.log(tamponsMoney);
+    let shavingMoney = (shavingCount * 75);
+    console.log(shavingMoney);
+    document.querySelector("#totaldogFood").setAttribute("style", "height:" + dogfoodMoney + "px");
+    document.querySelector("#totaldogclothes").setAttribute("style", "height:" + dogclothesMoney + "px");
+    document.querySelector("#totaldogtoy").setAttribute("style", "height:" + dogtoyMoney + "px");
+    document.querySelector("#totaldogcoat").setAttribute("style", "height:" + wintercoatMoney + "px");
+    document.querySelector("#totaldoghat").setAttribute("style", "height:" + hatAndGlovesMoney + "px");
+    document.querySelector("#totaldogsocks").setAttribute("style", "height:" + socksMoney + "px");
+    document.querySelector("#totaldogtooth").setAttribute("style", "height:" + toothbrushMoney + "px");
+    document.querySelector("#totaldogtampons").setAttribute("style", "height:" + tamponsMoney + "px");
+    document.querySelector("#totaldogshaving").setAttribute("style", "height:" + shavingMoney + "px");
 }

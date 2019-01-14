@@ -17,6 +17,15 @@ body {
 #doggraph1,
 #doggraph2,
 #doggraph3,
+#totaldogFood,
+#totaldogclothes,
+#totaldogtoy,
+#totaldogcoat,
+#totaldoghat,
+#totaldogsocks,
+#totaldogtooth,
+#totaldogtampons,
+#totaldogshaving,
 #clothesgraph1,
 #clothesgraph2,
 #clothesgraph3,
@@ -71,6 +80,13 @@ body {
     left: 131px;
 }
 
+.row-graph {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+}
+
 /*----------------------- Graph row  -----------------------*/
 
 .row {
@@ -110,6 +126,25 @@ body {
     max-width: 100%;
 }
 
+.col-c-top {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 10%;
+}
+
+.col-sm-4 {
+    width: 19.33%;
+    margin-left: 10%;
+    padding: 0;
+    margin-top: 15%;
+
+}
+
+.p-col-ind {
+    font-size: 0.7em;
+}
+
 .col-money {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -133,6 +168,13 @@ body {
     font-weight: 400;
     text-align: center;
     color: $white;
+}
+
+.dash-h1-center-black {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    color: $black;
 }
 
 /*-----------------------  Graph 1 Data  -----------------------*/
@@ -171,6 +213,58 @@ body {
     background-color: $darkblue;
     opacity: 0.2;
 }
+
+#totaldogFood {
+    @extend %blokdesign;
+    background-color: $darkblue;
+}
+
+#totaldogclothes {
+    @extend %blokdesign;
+    background-color: $darkblue;
+    opacity: 0.5;
+}
+
+#totaldogtoy {
+    @extend %blokdesign;
+    background-color: $darkblue;
+    opacity: 0.2;
+}
+
+#totaldogcoat {
+    @extend %blokdesign;
+    background-color: $redgraph;
+}
+
+#totaldoghat {
+    @extend %blokdesign;
+    background-color: $redgraph;
+    opacity: 0.5;
+}
+
+#totaldogsocks {
+    @extend %blokdesign;
+    background-color: $redgraph;
+    opacity: 0.2;
+}
+
+#totaldogtooth {
+    @extend %blokdesign;
+    background-color: $green;
+}
+
+#totaldogtampons {
+    @extend %blokdesign;
+    background-color: $green;
+    opacity: 0.5;
+}
+
+#totaldogshaving {
+    @extend %blokdesign;
+    background-color: $green;
+    opacity: 0.2;
+}
+
 
 /*----------------------- Graph 2 Data -----------------------*/
 

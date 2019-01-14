@@ -38,13 +38,13 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 function checkAdmin() {
     // if user is admin go to dashboard.html else donation.html
-    if (id === "P4sMSboWYhXKhCWKk0jVzEcgRdD2") {
+    if (id === "B2MQ2SLoAIeXC71emsTRuiZPhTA3") {
         console.log("Admin");
         document.location.href = 'dashboard.html';
     } else if (id == null) {
         console.log("user = null");
 
-    } else if (id !== "P4sMSboWYhXKhCWKk0jVzEcgRdD2") {
+    } else if (id !== "B2MQ2SLoAIeXC71emsTRuiZPhTA3") {
         console.log("Normal user");
         document.location.href = 'donation.html';
     }

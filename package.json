@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/mari48v8/endelaf-presentation#readme",
   "dependencies": {
-    "gsap": "^2.0.2"
+    "gsap": "^2.0.2",
+    "node-sass": "^4.11.0"
   }
 }
